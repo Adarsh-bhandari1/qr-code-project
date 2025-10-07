@@ -1,0 +1,90 @@
+:root {
+  color-scheme: only light;
+}
+
+.container-fluid {
+  background-color: rgb(31, 30, 30);
+  color: white;
+  padding: 0px;
+}
+.navbar {
+  padding: 0px;
+  font-size: 20px;
+}
+.navbar-nav {
+  margin-left: auto;
+}
+.navbar-brand {
+  margin-left: 30px;
+  font-size: 25px;
+}
+.navbar-nav .nav-item:last-child .nav-link {
+  margin-right: 30px;
+}
+.orange-cnt {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom right, orange, red);
+  height: 200px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 60px;
+  z-index: 0; /* changed code: keep banner under the card */
+}
+.orange-cnt h2 {
+  font-size: 50px;
+}
+.input-cnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border: 5px solid white;
+  padding: 12px;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+
+  max-width: 900px;
+  margin: 20px auto;
+  margin-top: -60px; /* changed code: increase pull-up if needed */
+  position: relative; /* changed code: enable z-index */
+  z-index: 20; /* changed code: sit above the banner */
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* keep form contents inline and prevent the form from stretching */
+.input-cnt form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto; /* don't grow to fill the full width */
+  margin: 0;
+}
+
+/* fixed / responsive input width so button stays on same line */
+.input-cnt input {
+  /* increased preferred width, still responsive */
+  flex: 0 0 560px; /* was 360px — adjust as needed */
+  max-width: 80vw; /* caps width on small screens */
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+
+.input-cnt .btn {
+  flex: 0 0 300px;
+  height: 48px; /* slightly taller to fit larger text */
+  border-radius: 12px;
+  background-image: linear-gradient(to bottom right, orange, red);
+  color: #fff;
+  font-size: 18px; /* increased button text size */
+  font-weight: 600;
+  padding: 0 20px; /* horizontal padding for visual balance */
+  line-height: 1;
+}
